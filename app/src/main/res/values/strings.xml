@@ -4,4 +4,7 @@
     <string name="enter_a_phrase">Informe uma frase</string>
     <string name="new_phrase">NOVA FRASE</string>
     <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
+    <string name="vamos_comecar">Vamos começar?</string>
+    <string name="salvar">SALVAR</string>
+    <string name="qual_o_seu_nome">Qual o seu nome?</string>
 </resources>
