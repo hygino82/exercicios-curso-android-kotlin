@@ -1,4 +1,4 @@
-package br.dev.motivationapp
+package br.dev.motivationapp.ui
 
 import android.os.Bundle
 import android.view.View
@@ -6,16 +6,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import br.dev.motivationapp.databinding.ActivityUserBinding
+import br.dev.motivationapp.R
+import br.dev.motivationapp.databinding.ActivityMainBinding
 
-class UserActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var binding: ActivityUserBinding
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityUserBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -28,16 +30,16 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.button_save) {
-            handleSave()
+        if (v.id == R.id.button_new_phrase) {
+            handleNewPhrase()
         }
     }
 
-    private fun handleSave() {
-
+    private fun handleNewPhrase() {
+        TODO("Not yet implemented")
     }
 
     private fun setListeners() {
-        binding.buttonSave.setOnClickListener(this)
+        binding.buttonNewPhrase.setOnClickListener(this)
     }
 }

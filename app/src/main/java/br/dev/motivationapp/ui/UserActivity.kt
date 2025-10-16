@@ -1,22 +1,24 @@
-package br.dev.motivationapp
+package br.dev.motivationapp.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import br.dev.motivationapp.databinding.ActivityMainBinding
+import br.dev.motivationapp.R
+import br.dev.motivationapp.databinding.ActivityUserBinding
+import br.dev.motivationapp.helper.SecurityPreferences
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var binding: ActivityMainBinding
+class UserActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityUserBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-
+        binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -29,16 +31,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.button_new_phrase) {
-            handleNewPhrase()
+        if (v.id == R.id.button_save) {
+            handleSave()
         }
     }
 
-    private fun handleNewPhrase() {
-        TODO("Not yet implemented")
+    private fun handleSave() {
+        //SecurityPreferences(applicationContext).storeString("phase", binding.editPhase.text.toString())
+        Toast.makeText(this, "Sucesso", Toast.LENGTH_SHORT).show()
     }
 
     private fun setListeners() {
-        binding.buttonNewPhrase.setOnClickListener(this)
+        binding.buttonSave.setOnClickListener(this)
     }
 }
