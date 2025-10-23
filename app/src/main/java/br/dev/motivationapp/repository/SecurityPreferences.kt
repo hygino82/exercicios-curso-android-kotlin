@@ -1,4 +1,4 @@
-package br.dev.motivationapp.helper
+package br.dev.motivationapp.repository
 
 import android.content.Context
 import androidx.core.content.edit

@@ -25,7 +25,7 @@
         android:layout_alignBottom="@+id/view_prases_menu"
         android:layout_marginStart="32dp"
         android:src="@drawable/ic_all"
-        app:tint="@color/white" />
+        app:tint="@color/black" />
 
     <ImageView
         android:id="@+id/imageview_happy"
@@ -35,7 +35,7 @@
         android:layout_alignBottom="@+id/view_prases_menu"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_happy"
-        app:tint="@color/white" />
+        app:tint="@color/black" />
 
     <ImageView
         android:id="@+id/imageview_sunny"
@@ -46,7 +46,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="32dp"
         android:src="@drawable/ic_sunny"
-        app:tint="@color/white" />
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/textview_name"

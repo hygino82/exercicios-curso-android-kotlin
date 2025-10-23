@@ -8,10 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import br.dev.motivationapp.MotivationConstants
+import br.dev.motivationapp.helper.MotivationConstants
 import br.dev.motivationapp.R
 import br.dev.motivationapp.databinding.ActivityUserBinding
-import br.dev.motivationapp.helper.SecurityPreferences
+import br.dev.motivationapp.repository.SecurityPreferences
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityUserBinding
@@ -34,6 +34,16 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         setListeners()
+        verifyUserName()
+    }
+
+    private fun verifyUserName() {
+        val name = securityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+
+        if (name.isNotEmpty()) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 
     override fun onClick(v: View) {
@@ -53,8 +63,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
             ).show()
         } else {
             securityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
