@@ -13,6 +13,7 @@ import br.dev.motivationapp.repository.PhraseRepository
 import br.dev.motivationapp.R
 import br.dev.motivationapp.databinding.ActivityMainBinding
 import br.dev.motivationapp.repository.SecurityPreferences
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
@@ -44,7 +45,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun refreshPhrase() {
-        binding.textviewPhrase.text = phraseRepository.getPhrase(filter)
+        binding.textviewPhrase.text =
+            phraseRepository.getPhrase(filter, Locale.getDefault().language)
     }
 
     private fun getUserName() {

@@ -10,4 +10,10 @@ class MotivationConstants private constructor() {
         val HAPPY = 1
         val SUNNY = 2
     }
+
+    object LANGUAGE {
+        const val ENGLISH = "en"
+        const val FRENCH = "fr"
+        const val PORTUGUESE = "pt"
+    }
 }
