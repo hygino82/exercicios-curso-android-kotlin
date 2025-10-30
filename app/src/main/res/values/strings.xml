@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">MotivationApp</string>
-    <string name="hello_kotlin">Olá, Kotlin!</string>
-    <string name="enter_a_phrase">Informe uma frase</string>
-    <string name="new_phrase">NOVA FRASE</string>
-    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
-    <string name="vamos_comecar">Vamos começar?</string>
-    <string name="salvar">SALVAR</string>
-    <string name="qual_o_seu_nome">Qual o seu nome?</string>
+    <string name="hello_kotlin">Hello, Kotlin!</string>
+    <string name="enter_a_phrase">Enter new phrase</string>
+    <string name="new_phrase">NEW PHRASE</string>
+    <string name="lorem" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
+    <string name="vamos_comecar">Let\'s begin?</string>
+    <string name="salvar">SAVE</string>
+    <string name="qual_o_seu_nome">What\'s your name?</string>
 </resources>
