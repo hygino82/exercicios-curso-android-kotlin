@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CoffeeBar</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="tempo_preparo">15 minutos</string>
+    <string name="pessoas_que_gostaram">54214</string>
+    <string name="descricao">Uma simples e perfeitamente extraída dose de espresso misturado com leite fresco e chocolate fazem essa bebida deliciosa</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="ingrediente1">1 dose se espresso</string>
+    <string name="ingrediente2">100ml de leite</string>
+    <string name="ingrediente3">1 colher de chocolate em pó</string>
+    <string name="voltar">Voltar</string>
+    <string name="tempo">Tempo</string>
+    <string name="favoritos">Favoritos</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageview_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/voltar"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textview_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cappuccino"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"
+        app:layout_constraintEnd_toEndOf="@id/view_background"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintTop_toTopOf="@id/view_background" />
+
+    <ImageView
+        android:id="@+id/imageview_clock"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/tempo"
+        android:src="@drawable/ic_clock"
+        app:layout_constraintEnd_toStartOf="@id/imageview_favorite"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_background"
+        app:tint="@color/brown" />
+
+    <ImageView
+        android:id="@+id/imageview_favorite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/favoritos"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageview_clock"
+        app:layout_constraintTop_toBottomOf="@id/view_background"
+        app:tint="@color/brown" />
+
+    <TextView
+        android:id="@+id/textview_tempo_preparo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempo_preparo"
+        app:layout_constraintEnd_toEndOf="@id/imageview_clock"
+        app:layout_constraintStart_toStartOf="@id/imageview_clock"
+        app:layout_constraintTop_toBottomOf="@id/imageview_clock" />
+
+    <TextView
+        android:id="@+id/textview_curtidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pessoas_que_gostaram"
+        app:layout_constraintEnd_toEndOf="@id/imageview_favorite"
+        app:layout_constraintStart_toStartOf="@id/imageview_favorite"
+        app:layout_constraintTop_toBottomOf="@id/imageview_favorite" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
