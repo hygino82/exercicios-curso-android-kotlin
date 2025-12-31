@@ -11,4 +11,5 @@
     <string name="voltar">Voltar</string>
     <string name="tempo">Tempo</string>
     <string name="favoritos">Favoritos</string>
+    <string name="lista_de_ingredientes">Lista de ingredientes</string>
 </resources>

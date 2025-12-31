@@ -82,5 +82,106 @@
         app:layout_constraintStart_toStartOf="@id/imageview_favorite"
         app:layout_constraintTop_toBottomOf="@id/imageview_favorite" />
 
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_tempo_preparo" />
+
+    <TextView
+        android:id="@+id/textview_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/descricao"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+    <TextView
+        android:id="@+id/textview_ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/ingredientes"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_description" />
+
+    <ImageView
+        android:id="@+id/imageview_ingredient1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/lista_de_ingredientes"
+        android:padding="16dp"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_ingredients" />
+
+    <TextView
+        android:id="@+id/textview_ingrediente1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingrediente1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_ingredient1"
+        app:layout_constraintStart_toEndOf="@+id/imageview_ingredient1"
+        app:layout_constraintTop_toTopOf="@id/imageview_ingredient1" />
+
+
+    <ImageView
+        android:id="@+id/imageview_ingredient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/lista_de_ingredientes"
+        android:padding="16dp"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_ingredient1" />
+
+    <TextView
+        android:id="@+id/textview_ingrediente2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingrediente2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_ingredient2"
+        app:layout_constraintStart_toEndOf="@+id/imageview_ingredient2"
+        app:layout_constraintTop_toTopOf="@id/imageview_ingredient2" />
+
+    <ImageView
+        android:id="@+id/imageview_ingredient3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/lista_de_ingredientes"
+        android:padding="16dp"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_ingredient2" />
+
+    <TextView
+        android:id="@+id/textview_ingrediente3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingrediente3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_ingredient3"
+        app:layout_constraintStart_toEndOf="@+id/imageview_ingredient3"
+        app:layout_constraintTop_toTopOf="@id/imageview_ingredient3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
