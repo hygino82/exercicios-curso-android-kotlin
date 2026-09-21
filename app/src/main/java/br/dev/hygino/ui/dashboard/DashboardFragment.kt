@@ -8,16 +8,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import br.dev.hygino.databinding.FragmentDashboardBinding
-
+// Toda fragment extende de Fragment e não de Activity
 class DashboardFragment : Fragment() {
-
+    // A fragment precisa de uma activity para existir
     private var _binding: FragmentDashboardBinding? = null
+    private val binding get() = _binding!!// binding não tem tratamento de null safe
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
+    override fun onCreateView(// responsável por criar o layout da fragment
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
