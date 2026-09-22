@@ -1,4 +1,4 @@
-package br.dev.hygino.ui.home
+package br.dev.hygino.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

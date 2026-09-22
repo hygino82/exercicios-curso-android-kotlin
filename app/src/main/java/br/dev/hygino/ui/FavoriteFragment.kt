@@ -1,4 +1,4 @@
-package br.dev.hygino.ui.dashboard
+package br.dev.hygino.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,30 +6,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import br.dev.hygino.databinding.FragmentDashboardBinding
+import br.dev.hygino.databinding.FragmentFavoriteBinding
+import br.dev.hygino.viewmodels.FavoriteViewModel
+
 // Toda fragment extende de Fragment e não de Activity
-class DashboardFragment : Fragment() {
+class FavoriteFragment : Fragment() {
     // A fragment precisa de uma activity para existir
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!// binding não tem tratamento de null safe
+
+    private val viewModel: FavoriteViewModel by viewModels()
 
     override fun onCreateView(// responsável por criar o layout da fragment
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
