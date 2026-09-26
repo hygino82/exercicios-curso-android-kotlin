@@ -9,7 +9,7 @@ import br.dev.hygino.ui.viewholder.BookViewHolder
 
 
 class BookAdapter : Adapter<BookViewHolder>() {
-    private val bookList = mutableListOf<BookEntity>()
+    private var bookList : List<BookEntity> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val view = ItemBookBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -22,5 +22,9 @@ class BookAdapter : Adapter<BookViewHolder>() {
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         holder.bind(bookList[position])
+    }
+
+    fun updateBooks(list:List<BookEntity>){
+        bookList=list
     }
 }

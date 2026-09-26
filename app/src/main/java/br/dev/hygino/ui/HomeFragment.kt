@@ -29,10 +29,18 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.recyclerviewBooks.layoutManager = LinearLayoutManager(context)
-
-        //adapter
         binding.recyclerviewBooks.adapter = adapter
+
+        viewModel.getAllBooks()
+        setObservers()
+
         return binding.root
+    }
+
+    private fun setObservers() {
+        viewModel.books.observe(viewLifecycleOwner) {
+            adapter.updateBooks(it)
+        }
     }
 
     override fun onDestroyView() {

@@ -2,7 +2,7 @@ package br.dev.hygino.repository
 
 import br.dev.hygino.entity.BookEntity
 
-class BookRepository private constructor() {
+class BookRepository {
 
     // Lista mutável que armazena os livros
     private val books = mutableListOf<BookEntity>()
@@ -21,7 +21,7 @@ class BookRepository private constructor() {
      * - Oferece um ponto de acesso global para essa instância.
      * - Pode ser útil para recursos compartilhados, como conexões de banco de dados ou repositórios de dados.
      */
-    companion object {
+    /*companion object {
         private lateinit var instance: BookRepository
 
         /**
@@ -36,7 +36,7 @@ class BookRepository private constructor() {
             }
             return instance
         }
-    }
+    }*/
 
     /**
      * Cria uma lista inicial de livros para popular o repositório.
