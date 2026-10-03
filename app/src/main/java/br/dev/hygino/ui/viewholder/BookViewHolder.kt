@@ -4,9 +4,10 @@ import androidx.recyclerview.widget.RecyclerView
 import br.dev.hygino.databinding.ItemBookBinding
 import br.dev.hygino.entity.BookEntity
 
-class BookViewHolder(private val item: ItemBookBinding) : RecyclerView.ViewHolder(item.root) {
+class BookViewHolder(private val item: ItemBookBinding) :
+    RecyclerView.ViewHolder(item.root) {
+
     fun bind(book: BookEntity) {
         item.textviewTitle.text = book.title
-        print(book.title)
     }
 }

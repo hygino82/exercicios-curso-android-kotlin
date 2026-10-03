@@ -4,43 +4,12 @@ import br.dev.hygino.entity.BookEntity
 
 class BookRepository {
 
-    // Lista mutável que armazena os livros
     private val books = mutableListOf<BookEntity>()
 
     init {
-        // Popula o repositório com os 10 livros iniciais
         books.addAll(getInitialBooks())
     }
 
-    /**
-     * O padrão Singleton garante que uma classe tenha apenas uma instância durante toda a execução do programa.
-     * Ele fornece um ponto de acesso global para acessar essa instância de forma controlada e segura.
-     *
-     * Vantagens do Singleton:
-     * - Garante que a classe tenha uma única instância.
-     * - Oferece um ponto de acesso global para essa instância.
-     * - Pode ser útil para recursos compartilhados, como conexões de banco de dados ou repositórios de dados.
-     */
-    /*companion object {
-        private lateinit var instance: BookRepository
-
-        /**
-         * Fornece a única instância do BookRepository.
-         * Esta é uma implementação thread-safe do padrão singleton.
-         */
-        fun getInstance(): BookRepository {
-            synchronized(this) {
-                if (!::instance.isInitialized) {
-                    instance = BookRepository()
-                }
-            }
-            return instance
-        }
-    }*/
-
-    /**
-     * Cria uma lista inicial de livros para popular o repositório.
-     */
     private fun getInitialBooks(): List<BookEntity> {
         return listOf(
             BookEntity(1, "To Kill a Mockingbird", "Harper Lee", true, "Ficção"),
@@ -93,7 +62,6 @@ class BookRepository {
     fun toggleFavoriteStatus(id: Int) {
         val book = books.find { it.id == id }
         if (book != null) {
-            // Alterna entre true e false
             book.favorite = !book.favorite
         }
     }

@@ -20,4 +20,6 @@
     <string name="button_remove_book">Remover livro</string>
     <string name="desc_book_image">Imagem de livros</string>
     <string name="titulo_do_livro">Título do livro</string>
+    <string name="genero">Gênero</string>
+    <string name="autor">Autor</string>
 </resources>
